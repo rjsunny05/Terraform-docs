@@ -2,10 +2,9 @@
 
 # **Documentation: Network Skeleton Terraform Module**
 
----![image](https://github.com/user-attachments/assets/d166b852-e20c-42ca-b08c-810311d3df1b)
+---
 
-
-
+![image](https://github.com/user-attachments/assets/d166b852-e20c-42ca-b08c-810311d3df1b)
 
 | Author        | Created On | Version | Last Updated By | Last Edited On | Internal Reviewer | L0              | L1          | L2              |
 | ------------- | ---------- | ------- | --------------- | -------------- | ----------------- | --------------- | ----------- | --------------- |
@@ -15,18 +14,17 @@
 
 ## Table of Contents
 
-* [Introduction](#introduction)
-* [Pre-requisites](#pre-requisites)
-* [What Are Terraform Modules?](#what-are-terraform-modules)
-* [Resources Required to Setup Network Skeleton](#resources-required-to-setup-network-skeleton)
-* [Resources Created After `terraform apply`](#resources-created-after-terraform-apply)
-* [Inputs](#inputs)
-* [Outputs](#outputs)
-* [Example Usage](#example-usage)
-* [Tags](#tags)
-* [Conclusion](#conclusion)
-* [Contact Information](#contact-information)
-* [References](#references)
+1. [Introduction](#1-introduction)
+2. [Pre-requisites](#2-pre-requisites)
+3. [What Are Terraform Modules?](#3-what-are-terraform-modules)
+4. [Usage](#4-usage)
+5. [Tags](#5-tags)
+6. [Resources Required to Setup Network Skeleton](#6-resources-required-to-setup-network-skeleton)
+7. [Inputs](#7-inputs)
+8. [Outputs](#8-outputs)
+9. [Conclusion](#9-conclusion)
+10. [Contact Information](#10-contact-information)
+11. [Resources](#11-resources)
 
 ---
 
@@ -52,7 +50,6 @@ Terraform modules let you group infrastructure code into reusable components. Th
 ---
 
 ## 4. Usage
-------
 
 ```hcl
 provider "aws" {
@@ -82,6 +79,8 @@ module "network_skeleton" {
 }
 ```
 
+---
+
 ## 5. Tags
 
 Tags are automatically applied to all resources for tracking, visibility, and cost management. Additional tags can be passed using the `tags` input variable.
@@ -98,6 +97,7 @@ tags = {
 }
 ```
 
+---
 
 ## 6. Resources Required to Setup Network Skeleton
 
@@ -149,7 +149,6 @@ tags = {
 | alb\_listener1\_arn   | ARN of the secondary ALB listener           |
 | route53\_name         | Domain name of Route 53 private hosted zone |
 
-
 ---
 
 ## 9. Conclusion
@@ -167,12 +166,13 @@ This module provides a reliable and reusable base network infrastructure using T
 ---
 
 ## 11. Resources
-------
-| Name | Type |
-|------|------|
-| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | Resource |
-| [aws_flow_log](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | Resource |
-| [aws_internet_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | Resource |
-| [aws_route53_zone](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | Resource |
+
+| Name                                                                                                                   | Type     |
+| ---------------------------------------------------------------------------------------------------------------------- | -------- |
+| [aws\_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)                            | Resource |
+| [aws\_flow\_log](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)                 | Resource |
+| [aws\_internet\_gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | Resource |
+| [aws\_route53\_zone](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone)         | Resource |
 
 ---
+
